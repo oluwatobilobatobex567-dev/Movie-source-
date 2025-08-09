@@ -1,0 +1,4 @@
+psycopg[binary]==3.2.9
+pyrogram==2.0.106
+Flask==3.0.3
+tgcrypto==1.2.5
