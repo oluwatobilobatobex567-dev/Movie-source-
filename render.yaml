@@ -2,24 +2,9 @@ services:
   - type: web
     name: movie-bot
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      apt-get update
+      apt-get install -y libssl-dev python3-dev build-essential
+      pip install -r requirements.txt
     startCommand: python bot.py
-    envVars:
-      - key: API_ID
-        value: 12345678
-      - key: API_HASH
-        value: your_api_hash_here
-      - key: BOT_TOKEN
-        value: your_bot_token_here
-      - key: ADMIN_ID
-        value: 123456789
-      - key: DATABASE_URL
-        value: postgres://user:pass@host:5432/dbname
-      - key: SOURCE_CHANNEL
-        value: -1001234567890
-      - key: CHANNELS
-        value: "@Channel1,@Channel2"
-      - key: DELETE_AFTER_SECONDS
-        value: "1200"
-      - key: PORT
-        value: "8080"
+    
