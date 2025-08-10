@@ -2,4 +2,4 @@ Flask==2.3.2
 pyrogram==2.0.19
 psycopg==3.2.9
 python-dotenv==1.0.0
-aiohttp==3.7.4.post0  # Version with pre-built wheels (no need to build from source)
+aiohttp==3.8.1
